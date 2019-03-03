@@ -10,6 +10,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 import { Button } from 'react-native';
+import { TextInput } from 'react-native';
 
 export default class FlexDimensionsBasics extends Component {
     render() {
@@ -21,7 +22,19 @@ export default class FlexDimensionsBasics extends Component {
                 <View style={{flex: 2, backgroundColor: 'powderblue'}} />
                 <View style={{flex: 2, backgroundColor: 'skyblue'}} />
                 <View style={{flex: 2, backgroundColor: 'yellow'}} />
-                <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+                <View style={{flex: 2, backgroundColor: 'skyblue'}} >
+                    <TextInput
+                        placeholder="User Name"
+                        returnKeyLabel = {"uname"}
+                        onChangeText={(text) => this.setState({text})}
+                    />
+
+                    <TextInput
+                        placeholder="Password"
+                        returnKeyLabel = {"pword"}
+                        onChangeText={(text) => this.setState({text})}
+                    />
+                </View>
                 <View style={{flex: 1, backgroundColor: 'powderblue'}} >
                     <Button
                         title="Log In"

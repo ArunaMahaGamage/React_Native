@@ -73,6 +73,27 @@ export default class FlexDimensionsBasics extends Component {
     }
 }
 
+
+
+class SecondActivity extends Component
+{
+    static navigationOptions =
+        {
+            title: 'SecondActivity',
+        };
+
+    render()
+    {
+        return(
+            <View style = { styles.container }>
+
+                <Text style = { styles.textContainer }> SecondActivity </Text>
+
+            </View>
+        );
+    }
+}
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,

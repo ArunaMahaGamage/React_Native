@@ -14,7 +14,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Home We have no friends!</Text>
+                <Text>Home !</Text>
 
                 <Button
                     title="Home Add some friends"

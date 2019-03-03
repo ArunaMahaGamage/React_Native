@@ -18,12 +18,12 @@ export default class SignIn extends React.Component {
         return (
             <View style={styles.container}>
 
-                <View style={{flex: 2, backgroundColor: 'skyblue', justifyContent: 'center' , alignItems: 'center' }} >
+                <View style={{flex: 2, justifyContent: 'center' , alignItems: 'center' }} >
                     <Image source={pic} style={{width: 193, height: 110}}/>
                 </View>
 
 
-                <View style={{flex: 4, backgroundColor: 'skyblue', justifyContent: 'center' , alignItems: 'center', width: 193 }} >
+                <View style={{flex: 4, justifyContent: 'center' , alignItems: 'center', width: 193 }} >
 
                     <View >
                         <TextInput

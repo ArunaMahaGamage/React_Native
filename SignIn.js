@@ -8,20 +8,79 @@
  */
 
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TextInput } from 'react-native';
 
 export default class SignIn extends React.Component {
     render() {
+        let pic = {
+            uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+        };
         return (
             <View style={styles.container}>
-                <Text>SignIn We have no friends!</Text>
 
-                <Button
-                    title="SignIn Add some friends"
-                    onPress={() =>
-                        this.props.navigation.navigate('Friends')
-                    }
-                />
+                <View style={{flex: 2, backgroundColor: 'skyblue', justifyContent: 'center' , alignItems: 'center' }} >
+                    <Image source={pic} style={{width: 193, height: 110}}/>
+                </View>
+
+
+                <View style={{flex: 4, backgroundColor: 'skyblue', justifyContent: 'center' , alignItems: 'center', width: 193 }} >
+
+                    <View >
+                        <TextInput
+                            placeholder="User Name"
+                            returnKeyLabel = {"uname"}
+                            onChangeText={(text) => this.setState({text})}
+                        />
+                    </View>
+
+                    <View >
+                        <TextInput
+                            placeholder="Password"
+                            returnKeyLabel = {"pword"}
+                            onChangeText={(text) => this.setState({text})}
+                        />
+                    </View>
+
+                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
+                        <Button
+                            title="Sign In"
+                            onPress={() =>
+                                this.props.navigation.navigate('Home')
+                            }
+                        />
+                    </View>
+
+                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
+                        <Button
+                            title="Sign Up"
+                            onPress={() =>
+                                this.props.navigation.navigate('SignUp')
+                            }
+                        />
+                    </View>
+
+                    <Text>---------- OR ----------</Text>
+
+
+                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
+                        <Button
+                            title="FaceBook"
+                            onPress={() =>
+                                this.props.navigation.navigate('Friends')
+                            }
+                        />
+                    </View>
+
+                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
+                        <Button
+                            title="Google"
+                            onPress={() =>
+                                this.props.navigation.navigate('Friends')
+                            }
+                        />
+                    </View>
+                </View>
+
             </View>
         );
     }

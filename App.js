@@ -13,9 +13,14 @@ import { Button } from 'react-native';
 import { TextInput } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { Image } from 'react-native';
+import { Alert } from 'react-native';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 
 export default class FlexDimensionsBasics extends Component {
+    _onPressButton() {
+        // Alert.alert('You tapped the button!')
+    }
     render() {
         let pic = {
             uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
@@ -52,7 +57,7 @@ export default class FlexDimensionsBasics extends Component {
                 <View style={{flex: 1, backgroundColor: 'powderblue'}} >
                     <View style={styles.buttonContainer}>
                         <Button
-                            title="Log In"
+                            title="Sigin In"
                             color="#841584"
                         />
                     </View>
@@ -62,7 +67,8 @@ export default class FlexDimensionsBasics extends Component {
                 <View style={{flex: 1, backgroundColor: 'powderblue'}} >
                     <View style={styles.buttonContainer}>
                         <Button
-                            title="Sigin In"
+                            onPress={this._onPressButton}
+                            title="Sigin Up"
                             color="#841584"
                         />
                     </View>

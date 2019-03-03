@@ -10,14 +10,14 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default class Home extends React.Component {
+export default class SignUp extends React.Component {
     render() {
         return (
             <View style={styles.container}>
                 <Text>Home We have no friends!</Text>
 
                 <Button
-                    title="Home Add some friends"
+                    title="SignUp Add some friends"
                     onPress={() =>
                         this.props.navigation.navigate('Friends')
                     }

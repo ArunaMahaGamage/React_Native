@@ -17,7 +17,7 @@ export default class Home extends React.Component {
                 <Text>We have no friends!</Text>
 
                 <Button
-                    title="Back to home"
+                    title="Friends Back to home"
                     onPress={() =>
                         this.props.navigation.navigate('Home')
                     }

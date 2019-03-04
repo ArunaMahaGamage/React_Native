@@ -17,7 +17,7 @@ export default class Home extends React.Component {
         return (
             <View style={styles.container}>
 
-                <View style={[{ width: "90%", height: "90%", margin: 2, backgroundColor: "red" }]}>
+                <View style={[{ width: "100%", height: "80%", margin: 2 }]}>
                     <MapView
                         style={{flex : 1}}
                         initialRegion={{
@@ -29,14 +29,17 @@ export default class Home extends React.Component {
                     />
                 </View>
 
-                <Text>Home !</Text>
+                <View style={[{ width: "100%", height: "10%", margin: 2 }]}>
+                    <Text>Nearst Shops to Your Location</Text>
 
-                <Button
-                    title="Home Add some friends"
-                    onPress={() =>
-                        this.props.navigation.navigate('Friends')
-                    }
-                />
+                    <Button
+                        title="Shops"
+                        onPress={() =>
+                            this.props.navigation.navigate('Friends')
+                        }
+                    />
+                </View>
+
             </View>
         );
     }

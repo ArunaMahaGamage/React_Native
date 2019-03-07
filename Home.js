@@ -12,7 +12,8 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  Button
 } from 'react-native';
 import RNGooglePlacePicker from 'react-native-google-place-picker';
 
@@ -47,11 +48,13 @@ onPress() {
   render() {
     return (
       <View style={styles.container}>
+
         <TouchableOpacity onPress={this.onPress.bind(this)}>
           <Text style={{color: '#72c02c', fontSize: 20, fontWeight:'bold'}}>
-            Click me to push Google Place Picker!
+            Click me to See Nearest Shops
           </Text>
         </TouchableOpacity>
+
         <View style={styles.location}>
           <Text style={{color: 'black', fontSize: 15}}>
             {JSON.stringify(this.state)}

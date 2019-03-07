@@ -10,6 +10,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image, TextInput } from 'react-native';
 
+var FBLoginButton = require('./FBLoginButton');
+
 export default class SignIn extends React.Component {
     render() {
         let pic = {
@@ -62,13 +64,8 @@ export default class SignIn extends React.Component {
                     <Text>---------- OR ----------</Text>
 
 
-                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
-                        <Button
-                            title="FaceBook"
-                            onPress={() =>
-                                this.props.navigation.navigate('Friends')
-                            }
-                        />
+                    <View style={stylesFB.container}>
+                        <FBLoginButton />
                     </View>
 
                     <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
@@ -93,4 +90,19 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+});
+
+const stylesFB = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: 'normal',
+    marginBottom: 48,
+  },
 });

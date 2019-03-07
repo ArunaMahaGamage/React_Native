@@ -55,11 +55,7 @@ onPress() {
           </Text>
         </TouchableOpacity>
 
-        <View style={styles.location}>
-          <Text style={{color: 'black', fontSize: 15}}>
-            {JSON.stringify(this.state)}
-          </Text>
-        </View>
+
       </View>
     );
   }

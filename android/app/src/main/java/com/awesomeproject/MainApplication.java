@@ -16,6 +16,8 @@ import com.facebook.appevents.AppEventsLogger;
 
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,7 +41,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNGooglePlacePickerPackage(),
             new RNGestureHandlerPackage(),
-            new FBSDKPackage(mCallbackManager)
+            new FBSDKPackage(mCallbackManager),
+            new RNGoogleSigninPackage()
       );
     }
 

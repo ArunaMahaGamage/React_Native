@@ -68,14 +68,6 @@ export default class SignIn extends React.Component {
                         <FBLoginButton />
                     </View>
 
-                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
-                        <Button
-                            title="Google"
-                            onPress={() =>
-                                this.props.navigation.navigate('Friends')
-                            }
-                        />
-                    </View>
                 </View>
 
             </View>

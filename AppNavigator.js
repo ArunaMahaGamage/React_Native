@@ -18,6 +18,8 @@ const AppNavigator = createStackNavigator({
     SignUp: { screen: SignUp } ,
     Home: { screen: Home } ,
     Friends: { screen: Friends}
-});
+}, { headerMode: 'none' }, {
+    initialRouteName: 'Loading'
+  });
 
 export default AppNavigator;

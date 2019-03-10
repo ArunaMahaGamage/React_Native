@@ -43,7 +43,7 @@ export default class SignIn extends React.Component {
                         />
                     </View>
 
-                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
+                    <View style={stylesButtons.container}>
                         <Button
                             title="Sign In"
                             onPress={() =>
@@ -52,20 +52,19 @@ export default class SignIn extends React.Component {
                         />
                     </View>
 
-                    <View style={[{ width: "90%", margin: 2, backgroundColor: "red" }]}>
+                    <View style={stylesFB.container}>
+                        <FBLoginButton />
+                    </View>
+
+                    <Text>---------- OR ----------</Text>
+
+                    <View style={stylesButtons.container}>
                         <Button
                             title="Sign Up"
                             onPress={() =>
                                 this.props.navigation.navigate('SignUp')
                             }
                         />
-                    </View>
-
-                    <Text>---------- OR ----------</Text>
-
-
-                    <View style={stylesFB.container}>
-                        <FBLoginButton />
                     </View>
 
                 </View>
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
 
 const stylesFB = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -97,4 +95,13 @@ const stylesFB = StyleSheet.create({
     fontWeight: 'normal',
     marginBottom: 48,
   },
+});
+
+const stylesButtons = StyleSheet.create({
+  container: {
+     width: "100%",
+     margin: 2,
+     backgroundColor: "red" ,
+     flexDirection: 'column',
+    },
 });

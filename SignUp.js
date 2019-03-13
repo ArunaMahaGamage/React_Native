@@ -8,20 +8,39 @@
  */
 
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TextInput } from 'react-native';
 
 export default class SignUp extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Home We have no friends!</Text>
 
-                <Button
-                    title="SignUp Add some friends"
-                    onPress={() =>
-                        this.props.navigation.navigate('Friends')
-                    }
-                />
+
+                <View >
+                        <TextInput
+                            placeholder="User Name"
+                            returnKeyLabel = {"uname"}
+                            onChangeText={(text) => this.setState({text})}
+                        />
+                    </View>
+
+                    <View >
+                        <TextInput
+                            placeholder="Password"
+                            returnKeyLabel = {"pword"}
+                            onChangeText={(text) => this.setState({text})}
+                        />
+                    </View>
+
+                    <View style={stylesButtons.container}>
+                        <Button
+                            title="Sign In"
+                            onPress={() =>
+                                this.props.navigation.navigate('Home')
+                            }
+                        />
+                    </View>
+
             </View>
         );
     }
@@ -33,5 +52,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+});
+
+const stylesButtons = StyleSheet.create({
+  container: {
+     width: "40%",
+     margin: 2,
+     backgroundColor: "red" ,
+     flexDirection: 'column',
     },
 });
